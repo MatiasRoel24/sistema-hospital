@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Apellido" />
+
+    <EditText
+        android:id="@+id/editTextIdentification"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="DNI"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nombre de usuario" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/editTextMedicalLicense"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Credencial medica"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/buttonSaveRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Registrar"
+        />
+
+
+</LinearLayout>
