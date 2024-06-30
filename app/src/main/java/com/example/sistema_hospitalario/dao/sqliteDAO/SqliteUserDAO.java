@@ -63,29 +63,39 @@ public class SqliteUserDAO implements UserDAO {
     }
 
     @Override
-    public void getUser(String userId, OnUserReceivedListener listener) {
-        String query = "SELECT * FROM user WHERE id=?";
-        String[] whereArgs = { userId };
+    public void getUser(String email, OnUserReceivedListener listener) {
+        String query = "SELECT * FROM user WHERE email=?";
+        String[] whereArgs = { email };
 
-        Cursor cursor = db.getReadableDatabase().rawQuery(query, whereArgs);
+        Cursor cursor = null;
         UserDTO user = null;
-        if (cursor != null && cursor.moveToFirst()) {
-            user = new UserDTO(
-                    cursor.getString(cursor.getColumnIndexOrThrow("id")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("firstName")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("lastName")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("dni")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("email")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("userName")),
-                    cursor.getString(cursor.getColumnIndexOrThrow("password")),
-                    cursor.getInt(cursor.getColumnIndexOrThrow("medical_license"))
-            );
-            cursor.close();
+        try {
+            cursor = db.getReadableDatabase().rawQuery(query, whereArgs);
+            if (cursor != null && cursor.moveToFirst()) {
+                user = new UserDTO(
+                        cursor.getString(cursor.getColumnIndexOrThrow("firstName")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("lastName")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("dni")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("email")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("userName")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("password")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("medical_license"))
+                );
+                cursor.close();
+            }
+        } catch (Exception e) {
+            listener.onError(e);
+            return;
         }
 
-        UserDTO finalUser = user;
-        Log.d(TAG, "getUser: " + finalUser.toString());
+        if (user != null) {
+            Log.d(TAG, "getUser: " + user.toString());
+            listener.onUserReceived(user);
+        }else{
+            listener.onUserReceived(user);
+        }
     }
+
 
     @Override
     public void getAllUsers(OnUsersReceivedListener listener) {

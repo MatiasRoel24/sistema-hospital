@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        //Inicializacion de inputs
+        //Inicializo de inputs
         editTextName = findViewById(R.id.editTextName);
         editTextLastName = findViewById(R.id.editTextLastName);
         editTextIdentification = findViewById(R.id.editTextIdentification);
@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextMedicalLicense = findViewById(R.id.editTextMedicalLicense);
 
-        //Button
+        //Button Register
         buttonSaveRegister = findViewById(R.id.buttonSaveRegister);
 
         //Button Listener
@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Validacion de los inputs
         if(name.isEmpty() || lastName.isEmpty() || dni.isEmpty() || userName.isEmpty() || email.isEmpty() || password.isEmpty() || medical_license.isEmpty()){
-            Toast.makeText(this, "Por favor ingresa todos los datos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Por favor ingrese todos los datos", Toast.LENGTH_SHORT).show();
             return false;
         }
 

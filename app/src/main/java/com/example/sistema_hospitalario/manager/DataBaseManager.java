@@ -20,7 +20,7 @@ public class DataBaseManager extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE user (firstName TEXT, lastName TEXT, dni TEXT, userName TEXT, email TEXT, password TEXT, medical_license INTEGER);");
+        db.execSQL("CREATE TABLE user (firstName TEXT, lastName TEXT, dni TEXT, userName TEXT, email TEXT UNIQUE, password TEXT, medical_license INTEGER);");
     }
 
     @Override

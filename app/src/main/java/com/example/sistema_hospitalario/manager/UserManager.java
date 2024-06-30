@@ -33,8 +33,8 @@ public class UserManager {
         executorService.execute(() -> sqliteUserDAO.deleteUser(userId, user));
     }
 
-    public void getUser(String userId, OnUserReceivedListener listener) {
-        executorService.execute(() -> sqliteUserDAO.getUser(userId, listener));
+    public void getUser(String email, OnUserReceivedListener listener) {
+        executorService.execute(() -> sqliteUserDAO.getUser(email, listener));
     }
 
     public void getAllUsers(OnUsersReceivedListener listener) {

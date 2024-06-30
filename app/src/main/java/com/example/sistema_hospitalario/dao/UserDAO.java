@@ -8,6 +8,6 @@ public interface UserDAO {
     void createUser(UserDTO user);
     void updateUser(String userId, UserDTO user);
     void deleteUser(String userId, UserDTO user);
-    void getUser(String userId, OnUserReceivedListener listener);
+    void getUser(String email, OnUserReceivedListener listener);
     void getAllUsers(OnUsersReceivedListener listener);
 }
