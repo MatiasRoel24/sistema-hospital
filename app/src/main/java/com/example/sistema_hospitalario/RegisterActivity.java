@@ -29,7 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.activity_register);
 
         //Inicializo de inputs
         editTextName = findViewById(R.id.editTextName);
@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Boolean userCreated = createUser(nameStr, lastNameStr, identificationStr, userNameStr, emailStr, passwordStr, medicalLicenseStr);
 
                 if(userCreated){
-                    Intent intent = new Intent(RegisterActivity.this, MainViewActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, LobbyActivity.class);
                     startActivity(intent);
                 }
             }

@@ -82,7 +82,7 @@
         android:layout_marginTop="100dp"
         android:textSize="20sp"
         android:text="Registrar"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/green"
         />
 
 

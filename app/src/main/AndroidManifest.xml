@@ -24,10 +24,11 @@
 
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".MainViewActivity"></activity>
+        <activity android:name=".LobbyActivity"></activity>
         <activity android:name=".PatientActivity"></activity>
         <activity android:name=".ProfileActivity"></activity>
-
+        <activity android:name=".ProfileEditActivity"></activity>
+        <activity android:name=".ChangePassword"></activity>
 
     </application>
 

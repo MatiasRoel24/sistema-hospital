@@ -25,12 +25,12 @@ public class UserManager {
         executorService.execute(() -> sqliteUserDAO.createUser(user));
     }
 
-    public void updateUser(String userId, UserDTO user) {
-        executorService.execute(() -> sqliteUserDAO.updateUser(userId, user));
+    public void updateUser(String email, UserDTO user) {
+        executorService.execute(() -> sqliteUserDAO.updateUser(email, user));
     }
 
-    public void deleteUser(String userId, UserDTO user) {
-        executorService.execute(() -> sqliteUserDAO.deleteUser(userId, user));
+    public void deleteUser(String email) {
+        executorService.execute(() -> sqliteUserDAO.deleteUser(email));
     }
 
     public void getUser(String email, OnUserReceivedListener listener) {

@@ -38,26 +38,48 @@ public class SqliteUserDAO implements UserDAO {
     }
 
     @Override
-    public void updateUser(String userId, UserDTO userDTO) {
-            ContentValues values = new ContentValues();
+    public void updateUser(String email, UserDTO userDTO) {
+        ContentValues values = new ContentValues();
+
+        if (userDTO.getFirstName() != null && !userDTO.getFirstName().isEmpty()) {
             values.put("firstName", userDTO.getFirstName());
+        }
+
+        if (userDTO.getLastName() != null && !userDTO.getLastName().isEmpty()) {
             values.put("lastName", userDTO.getLastName());
+        }
+
+        if (userDTO.getDni() != null && !userDTO.getDni().isEmpty()) {
             values.put("dni", userDTO.getDni());
+        }
+
+        if (userDTO.getUserName() != null && !userDTO.getUserName().isEmpty()) {
             values.put("userName", userDTO.getUserName());
+        }
+
+        if (userDTO.getEmail() != null && !userDTO.getEmail().isEmpty()) {
             values.put("email", userDTO.getEmail());
+        }
+
+        if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
             values.put("password", userDTO.getPassword());
+        }
+
+        if (userDTO.getMedical_license() != 0) {
             values.put("medical_license", userDTO.getMedical_license());
+        }
 
-            String whereClause = "id=?";
-            String[] whereArgs = { userId };
+        String whereClause = "email=?";
+        String[] whereArgs = { email };
 
-            db.getWritableDatabase().update("user", values, whereClause, whereArgs);
+        db.getWritableDatabase().update("user", values, whereClause, whereArgs);
     }
 
+
     @Override
-    public void deleteUser(String userId, UserDTO userDTO) {
-        String whereClause = "id=?";
-        String[] whereArgs = { userId };
+    public void deleteUser(String email) {
+        String whereClause = "email=?";
+        String[] whereArgs = { email };
 
         db.getWritableDatabase().delete("user", whereClause, whereArgs);
     }

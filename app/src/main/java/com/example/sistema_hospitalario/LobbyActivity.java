@@ -4,43 +4,50 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainViewActivity extends AppCompatActivity {
+public class LobbyActivity extends AppCompatActivity {
 
-    private EditText title;
+    private TextView title;
     private Button buttonViewPatientList, buttonViewProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_view);
+        setContentView(R.layout.activity_lobby);
 
-        //Obtener el email del usuario desde el Intent
+        // Getting interface elements
+        buttonViewPatientList = findViewById(R.id.showListOfPatients);
+        buttonViewProfile = findViewById(R.id.showMyProfile);
+        title = findViewById(R.id.welcome_user);
+
+        // Get the user's email from the Intent
         String userEmail = getIntent().getStringExtra("user_email");
         String userName = getIntent().getStringExtra("user_name");
 
-        //Seteo en el titulo
-        title.setText("Bienvenido " + userName);
+        // Set userName
+        if(userName != null){
+            title.setText("Bienvenido " + userName);
+        }
 
-        //Button Listener
+        //  Show de next view
         buttonViewProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainViewActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(LobbyActivity.this, ProfileActivity.class);
                 intent.putExtra("user_email", userEmail);
+                startActivity(intent);
             }
         });
 
-        //Button Listener
         buttonViewPatientList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainViewActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(LobbyActivity.this, PatientActivity.class);
                 intent.putExtra("user_email", userEmail);
+                startActivity(intent);
             }
         });
 

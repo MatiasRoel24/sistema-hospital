@@ -12,7 +12,7 @@
         android:id="@+id/welcome_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenido/a Camila"
+        android:text="Bienvenido/a"
         android:layout_marginBottom="600dp"
         android:textAlignment="center"
         android:textSize="20sp" />

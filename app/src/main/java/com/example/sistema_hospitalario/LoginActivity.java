@@ -15,7 +15,6 @@ import com.example.sistema_hospitalario.manager.ExecutorManager;
 import com.example.sistema_hospitalario.manager.UserManager;
 
 public class LoginActivity extends AppCompatActivity {
-
     private UserManager userManager;
     private ExecutorManager executorManager;
 
@@ -27,24 +26,24 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
 
-        //Inicializo de inputs
+        // Getting interface elements
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
-
-        //Button Login
         buttonSaveLogin = findViewById(R.id.buttonSaveLogin);
 
-        //Button Listener
+        //  Getting interface buttons
         buttonSaveLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Strings
+                //TODO: VALIDAR QUE NO ESTE VACIO
+
+                // Strings
                 emailStr = editTextEmail.getText().toString();
                 passwordStr = editTextPassword.getText().toString();
 
-                //
+                // Method responsible for login
                 loginCheck(emailStr, passwordStr);
             }
         });
@@ -52,24 +51,24 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginCheck(String emailStr, String passwordStr) {
-        //Validacion de los inputs
+        // Input validation
         if (emailStr.isEmpty() || passwordStr.isEmpty()) {
             Toast.makeText(this, "Por favor ingrese todos los datos", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        //Executor
+        // Executor
         executorManager = new ExecutorManager();
 
-        //UserManager
+        // UserManager
         userManager = new UserManager(executorManager.getExecutorService());
         userManager.setContext(this);
 
-        //Obtencion de usuario
+        // Getting user
         userManager.getUser(emailStr, new OnUserReceivedListener() {
             @Override
             public void onUserReceived(UserDTO user) {
-                //Metodo para validar si el usuario es correcto
+                // Method to validate user
                 validateUser(user, passwordStr);
             }
 
@@ -82,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void validateUser(UserDTO user, String passwordStr){
         if (user != null && user.getPassword().equals(passwordStr)) {
-            Intent intent = new Intent(LoginActivity.this, MainViewActivity.class);
+            Intent intent = new Intent(LoginActivity.this, LobbyActivity.class);
             intent.putExtra("user_email", user.getEmail());
             intent.putExtra("user_name", user.getUserName());
             startActivity(intent);

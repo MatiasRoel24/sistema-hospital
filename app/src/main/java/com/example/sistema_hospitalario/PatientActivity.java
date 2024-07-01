@@ -8,7 +8,7 @@ public class PatientActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patients_view);
+        setContentView(R.layout.activity_patients);
 
 
     }
