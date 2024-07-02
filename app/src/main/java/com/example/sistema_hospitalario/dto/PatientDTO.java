@@ -2,7 +2,6 @@ package com.example.sistema_hospitalario.dto;
 
 public class PatientDTO {
 
-    private String id;
     private String firstName;
     private String lastName;
     private String dni;
@@ -12,27 +11,21 @@ public class PatientDTO {
     private String gender;
     private String phone;
     private String address;
+    private String doctor_email;
 
-    public PatientDTO(String address, String phone, String gender, String dateOfBirth, Integer user_medical_code, String email, String dni, String lastName, String firstName, String id) {
-        this.address = address;
-        this.phone = phone;
-        this.gender = gender;
-        this.dateOfBirth = dateOfBirth;
-        this.user_medical_code = user_medical_code;
-        this.email = email;
-        this.dni = dni;
-        this.lastName = lastName;
+    public PatientDTO(String firstName, String lastName, String dni, String email, Integer user_medical_code, String dateOfBirth, String gender, String phone, String address, String doctor_email) {
         this.firstName = firstName;
-        this.id = id;
+        this.lastName = lastName;
+        this.dni = dni;
+        this.email = email;
+        this.user_medical_code = user_medical_code;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.phone = phone;
+        this.address = address;
+        this.doctor_email = doctor_email;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -104,5 +97,13 @@ public class PatientDTO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getDoctor_email() {
+        return doctor_email;
+    }
+
+    public void setDoctor_email(String doctor_email) {
+        this.doctor_email = doctor_email;
     }
 }

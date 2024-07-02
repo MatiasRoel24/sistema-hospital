@@ -29,7 +29,9 @@
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".ProfileEditActivity"></activity>
         <activity android:name=".ChangePassword"></activity>
-
+        <activity android:name=".PatientDetailActivity"></activity>
+        <activity android:name=".PatientEditActivity"></activity>
+        <activity android:name=".PatientAddActivity"></activity>
     </application>
 
 </manifest>

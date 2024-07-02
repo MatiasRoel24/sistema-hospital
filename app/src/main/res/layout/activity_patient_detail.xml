@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/patientDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalles del paciente: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/showPatientFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailFistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/showPatientLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/showPatientDNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNI: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailDNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNI"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/showPatientMedicalCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codigo de obra social: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailMedicalCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codigo"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/showPatientDateOfBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de nacimiento"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailDateOfBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nacimiento"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/showPatientDetailGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genero: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="genero"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/showPatientDetailPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/showPatientDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direccion: "
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirreccion"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/informativeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Solo podra editar la direccion y el codigo de obra social"
+        android:textAlignment="center"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/red"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonGoToUpdatePatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Editar paciente"
+        android:backgroundTint="@color/yellow"
+        />
+
+    <Button
+        android:id="@+id/buttonDeletePatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Eliminar Paciente"
+        android:backgroundTint="@color/red"
+        />
+
+
+</LinearLayout>

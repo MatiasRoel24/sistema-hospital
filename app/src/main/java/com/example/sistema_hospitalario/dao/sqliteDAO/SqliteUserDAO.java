@@ -110,12 +110,7 @@ public class SqliteUserDAO implements UserDAO {
             return;
         }
 
-        if (user != null) {
-            Log.d(TAG, "getUser: " + user.toString());
-            listener.onUserReceived(user);
-        }else{
-            listener.onUserReceived(user);
-        }
+        listener.onUserReceived(user);
     }
 
 
@@ -125,9 +120,10 @@ public class SqliteUserDAO implements UserDAO {
         Cursor cursor = db.getReadableDatabase().rawQuery(query, null);
         List<UserDTO> users = new ArrayList<>();
 
-        if (cursor != null) {
-            while (cursor.moveToNext()) {
-                UserDTO user = new UserDTO(
+        try {
+            if (cursor != null) {
+                while (cursor.moveToNext()) {
+                    UserDTO user = new UserDTO(
                         cursor.getString(cursor.getColumnIndexOrThrow("firstName")),
                         cursor.getString(cursor.getColumnIndexOrThrow("lastName")),
                         cursor.getString(cursor.getColumnIndexOrThrow("dni")),
@@ -135,12 +131,16 @@ public class SqliteUserDAO implements UserDAO {
                         cursor.getString(cursor.getColumnIndexOrThrow("userName")),
                         cursor.getString(cursor.getColumnIndexOrThrow("password")),
                         cursor.getInt(cursor.getColumnIndexOrThrow("medical_license"))
-                );
-                users.add(user);
+                    );
+                    users.add(user);
+                }
+                cursor.close();
             }
-            cursor.close();
+        } catch (Exception e) {
+            listener.onError(e);
+            return;
         }
 
-        Log.d(TAG, "getAllUsers: " + users);
+        listener.onUsersReceived(users);
     }
 }

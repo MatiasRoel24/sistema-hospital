@@ -7,7 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sistema_hospitalario.dto.PatientDTO;
+import com.example.sistema_hospitalario.manager.ExecutorManager;
+import com.example.sistema_hospitalario.manager.PatientManager;
+
 public class MainActivity extends AppCompatActivity {
+
     private Button buttonLogin;
     private Button buttonRegister;
 

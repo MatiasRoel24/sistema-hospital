@@ -2,6 +2,7 @@ package com.example.sistema_hospitalario.manager;
 
 import android.content.Context;
 
+import com.example.sistema_hospitalario.dao.UserDAO;
 import com.example.sistema_hospitalario.dao.listeners.OnUserReceivedListener;
 import com.example.sistema_hospitalario.dao.listeners.OnUsersReceivedListener;
 import com.example.sistema_hospitalario.dao.sqliteDAO.SqliteUserDAO;
@@ -9,7 +10,7 @@ import com.example.sistema_hospitalario.dto.UserDTO;
 
 import java.util.concurrent.ExecutorService;
 
-public class UserManager {
+public class UserManager implements UserDAO {
     private ExecutorService executorService;
     private SqliteUserDAO sqliteUserDAO;
 
