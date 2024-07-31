@@ -29,7 +29,7 @@ public class LobbyActivity extends AppCompatActivity {
 
         // Set userName
         if(userName != null){
-            title.setText("Bienvenido " + userName);
+            title.setText("¡Hola, " + userName + "!");
         }
 
         //  Show de next view

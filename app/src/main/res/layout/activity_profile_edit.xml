@@ -8,18 +8,25 @@
     android:padding="20dp"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="152dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/logo_osde_azul" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Mis datos"
+        android:text="Editar perfil"
         android:textAlignment="center"
         android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="136dp"
+        android:layout_width="175dp"
         android:layout_height="94dp"
         android:layout_marginLeft="100dp"
         android:layout_marginBottom="5dp"
@@ -112,7 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/blue"
         android:text="Guardar cambios" />
 
 

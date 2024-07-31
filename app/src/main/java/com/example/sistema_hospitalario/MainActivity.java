@@ -1,11 +1,13 @@
 package com.example.sistema_hospitalario;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.sistema_hospitalario.dto.PatientDTO;
 import com.example.sistema_hospitalario.manager.ExecutorManager;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (getSupportActionBar() != null) getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.blue)));
 
         //Manager Buttons
         buttonLogin = findViewById(R.id.iniciar_sesion);

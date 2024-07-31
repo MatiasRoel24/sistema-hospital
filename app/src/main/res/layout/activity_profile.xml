@@ -12,10 +12,11 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mis datos"
         android:layout_marginBottom="20dp"
+        android:text="Mi Perfil"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Nombre:"
+        android:text="Nombre"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -38,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="TextView"
+        android:text="Nombre"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
 
@@ -47,7 +50,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Apellido:"
+        android:text="Apellido"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -55,7 +59,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="TextView"
+        android:text="Apellido"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
@@ -63,7 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="DNI:"
+        android:text="DNI"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -71,7 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="TextView"
+        android:text="DNI"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
@@ -79,7 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Nombre de usuario:"
+        android:text="Nombre de usuario"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -87,7 +95,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="TextView"
+        android:text="Nombre de usuario"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
@@ -95,7 +104,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Nombre de Email:"
+        android:text="Email"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -103,7 +113,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:text="TextView"
+        android:text="Email"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
     <TextView
@@ -111,7 +122,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Numero licencia medica:"
+        android:text="Numero licencia medica"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -119,7 +131,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="TextView"
+        android:text="Licencia"
+        android:textAlignment="center"
         android:textSize="16sp" />
 
     <Button
